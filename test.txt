@@ -1,0 +1,14 @@
+
+def delete_file(file_path):
+    if not os.path.exists(file_path):
+        return "Error: Path does not exist"
+    os.remove(file_path)
+    return ("File " + file_path + " was removed from system.").encode()
+
+delete_file("hello.txt")
+
+UPDATE_FUNCTIONS {"command" : ["DELETE_FILE", "filepath"],"function_name": "delete_file" ,"description": "Gets filepath and removes file from system.", "code": "def delete_file(file_path):\n    if not os.path.exists(file_path):\n        return \"Error: Path does not exist\"\n    os.remove(file_path)\n    return (\"File \" + file_path + \" was removed from system.\").encode()"}
+
+DELETE_FILE C:\Users\אילי\PycharmProjects\OverTheAir\deleteme.txt
+
+UPDATE_FUNCTIONS {"command" : ["DELETE_FILE", "filepath"],"function_name": "delete_file" ,"description": "Gets filepath and removes file from system.", "code": "def delete_file(file_path):\n    if not os.path.exists(file_path):\n        return \"Error: Path does not exist\"\n    os.remove(file_path)\n    return (\"File \" + file_path + \" was removed from system.\").encode()\n\ndelete_file(\"hello.txt\")"}

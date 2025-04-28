@@ -1,0 +1,4 @@
+
+
+
+{"command" : ["DELETE_FILE", "filepath"],"function_name": "delete_file" ,"description": "Gets filepath and removes file from system.", "code": "def delete_file(file_path):\n    if not os.path.exists(file_path):\n        return \"Error: Path does not exist\"\n    os.remove(file_path)\n    return (\"File \" + file_path + \" was removed from system.\").encode()"}
